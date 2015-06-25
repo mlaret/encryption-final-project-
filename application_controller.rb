@@ -20,6 +20,7 @@ class MyApp2 < Sinatra::Base
     @numbers = Numbers.new(params["code"])
     erb :endpage
   end 
+  
   get "/endpage" do
     erb :endpage
   end
