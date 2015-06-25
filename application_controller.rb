@@ -1,5 +1,9 @@
 require 'bundler'
 Bundler.require
+require_relative"./numbers.rb"
+require_relative"./symbols.rb"
+require_relative"./letters.rb"
+
 
 class MyApp2 < Sinatra::Base
   get '/' do
@@ -18,10 +22,17 @@ class MyApp2 < Sinatra::Base
   
   post "/numbers" do 
     @numbers = Numbers.new(params["code"])
-    erb :endpage
+    erb :endpage1
   end 
   get "/endpage" do
     erb :endpage
+  end
+  get "/endpage1" do
+    erb :endpage2
+  end
+  
+  get "/enpage2" do
+    erb :endpage1
   end
 
   
