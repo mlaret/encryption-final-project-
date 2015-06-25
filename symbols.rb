@@ -1,32 +1,177 @@
 class Symbols
 
   def initialize(string)
-    string.to_i = @string
+    @string = string.to_s
+    if @string.length < 5 && @string.length > 0
+      symbols
+    elsif @string.length < 10 && @string.length > 6
+      symbols2
+    elsif @string.length < 31 && @string.length > 25
+      symbols3
+    else
+      symbols4
+    end
   end
 
   def symbols
+    @symbols =
+    @string.reverse
+    @string.downcase
+    @string.gsub("a","~")
+    @string.gusb("b","!")
+    @string.gsub("c","@")
+    @string.gsub("d","#")
+    @string.gsub("e","$")
+    @string.gsub("f","%")
+    @string.gsub("g","^")
+    @string.gsub("h","&")
+    @string.gsub("i","*")
+    @string.gsub("j","(")
+    @string.gsub("k",")")
+    @string.gsub("l","-")
+    @string.gsub("m","_")
+    @string.gsub("n","=")
+    @string.gsub("o","+")
+    @string.gsub("p","[")
+    @string.gsub("q","]")
+    @string.gsub("r","{")
+    @string.gsub("s","}")
+    @string.gsub("t","∆")
+    @string.gsub("u","œ")
+    @string.gsub("v","®")
+    @string.gsub("w",";")
+    @string.gsub("x",",")
+    @string.gsub("y","<")
+    @string.gsub("z",".")
+    @string.gsub("1",">")
+    @string.gsub("2","?")
+    @string.gsub("3","/")
+    @string.gsub("4","`")
+    @string.gsub("5","ø")
+    @string.gsub("6","˚")
+    @string.gsub("7","¬")
+    @string.gsub("8","å")
+    @string.gsub("9","µ")
+    @string.gsub("0","¥")
     
 
   end
 
   def symbols2
-
+    @string.gsub("a", "f")
+    @string.gusb("b", "8")
+    @string.gsub("c","t")
+    @string.gsub("d","2")
+    @string.gsub("e","3")
+    @string.gsub("f","9")
+    @string.gsub("g","x")
+    @string.gsub("h","w")
+    @string.gsub("i","q")
+    @string.gsub("j","r")
+    @string.gsub("k","p")
+    @string.gsub("l","s")
+    @string.gsub("m","d")
+    @string.gsub("n","y")
+    @string.gsub("o","e")
+    @string.gsub("p","t")
+    @string.gsub("q","t")
+    @string.gsub("r","t")
+    @string.gsub("s","t")
+    @string.gsub("t","t")
+    @string.gsub("u","t")
+    @string.gsub("v","t")
+    @string.gsub("w","t")
+    @string.gsub("x","t")
+    @string.gsub("y","t")
+    @string.gsub("z","t")
+    @string.gsub("1","t")
+    @string.gsub("2","t")
+    @string.gsub("3","t")
+    @string.gsub("4","t")
+    @string.gsub("5","t")
+    @string.gsub("6","t")
+    @string.gsub("7","t")
+    @string.gsub("8","t")
+    @string.gsub("9","t")
+    @string.gsub("0","t")
   end
 
   def symbols3
-
+    @string.gsub("a", "f")
+    @string.gusb("b", "8")
+    @string.gsub("c","t")
+    @string.gsub("d","2")
+    @string.gsub("e","3")
+    @string.gsub("f","9")
+    @string.gsub("g","x")
+    @string.gsub("h","w")
+    @string.gsub("i","q")
+    @string.gsub("j","r")
+    @string.gsub("k","p")
+    @string.gsub("l","s")
+    @string.gsub("m","d")
+    @string.gsub("n","y")
+    @string.gsub("o","e")
+    @string.gsub("p","t")
+    @string.gsub("q","t")
+    @string.gsub("r","t")
+    @string.gsub("s","t")
+    @string.gsub("t","t")
+    @string.gsub("u","t")
+    @string.gsub("v","t")
+    @string.gsub("w","t")
+    @string.gsub("x","t")
+    @string.gsub("y","t")
+    @string.gsub("z","t")
+    @string.gsub("1","t")
+    @string.gsub("2","t")
+    @string.gsub("3","t")
+    @string.gsub("4","t")
+    @string.gsub("5","t")
+    @string.gsub("6","t")
+    @string.gsub("7","t")
+    @string.gsub("8","t")
+    @string.gsub("9","t")
+    @string.gsub("0","t")
   end
 
   def symbols4
-
+    @string.gsub("a", "f")
+    @string.gsub("b", "8")
+    @string.gsub("c","t")
+    @string.gsub("d","2")
+    @string.gsub("e","3")
+    @string.gsub("f","9")
+    @string.gsub("g","x")
+    @string.gsub("h","w")
+    @string.gsub("i","q")
+    @string.gsub("j","r")
+    @string.gsub("k","p")
+    @string.gsub("l","s")
+    @string.gsub("m","d")
+    @string.gsub("n","y")
+    @string.gsub("o","e")
+    @string.gsub("p","t")
+    @string.gsub("q","t")
+    @string.gsub("r","t")
+    @string.gsub("s","t")
+    @string.gsub("t","t")
+    @string.gsub("u","t")
+    @string.gsub("v","t")
+    @string.gsub("w","t")
+    @string.gsub("x","t")
+    @string.gsub("y","t")
+    @string.gsub("z","t")
+    @string.gsub("1","t")
+    @string.gsub("2","t")
+    @string.gsub("3","t")
+    @string.gsub("4","t")
+    @string.gsub("5","t")
+    @string.gsub("6","t")
+    @string.gsub("7","t")
+    @string.gsub("8","t")
+    @string.gsub("9","t")
+    @string.gsub("0","t")
   end
-  if string.length < 5 && string.length > 0
-    symbols
-  elsif string.length < 10 && string.length > 6
-    symbols2
-  elsif string.length < 31 && string.length > 25
-    symbols3
-  else
-    symbols4
-  
+
 end
