@@ -1,0 +1,37 @@
+body {
+    background-image: url("http://media.giphy.com/media/dbRBclOWZ8QIU/giphy.gif");
+}
+
+h1 {
+  color: green;
+  text-align: center;
+}
+
+h1{
+  font-size: 100px;
+  font-family: Inconsolata;
+}
+a {
+  font-size: 35px;
+  color: green;
+font-family: Inconsolata;
+}
+
+a {
+    color: green;
+}
+#hello {
+  text-align: center;
+  font-size: 50px;
+}
+
+h3 {
+  font-size: 35px;
+  color: green;
+  font-family: Inconsolata;
+
+}
+
+#playa {
+    text-align: center;
+}

@@ -2,11 +2,57 @@ require 'bundler'
 Bundler.require
 
 class MyApp2 < Sinatra::Base
+  get '/' do
+    erb :index_final_project
+  end
+  
+  post "/letters" do
+    @letters = Letters.new(params["code"])
+    erb :endpage
+  end 
+  
+  post "/symbols" do
+    @symbols = Symbols.new(params["code"])
+    erb :endpage
+  end 
+  
+  post "/numbers" do 
+    @numbers = Numbers.new(params["code"])
+    erb :endpage
+  end 
+  get "/endpage" do
+    erb :endpage
+  end
+
+  
+  
+  get "/letters" do
+    erb :letter
+  end
+  
+  get "/numbers" do
+    erb :numbers
+  end
+  
+  get "/symbols" do
+    
+    erb :symbols
+  end
+  
+  get "/decode" do
+    erb :decode
+  end
+  
 
 end
-get "/vault" do
-  erb :vault 
-end 
+
+  
+
+
+# end
+# get "/vault" do
+#   erb :vault 
+# end 
 
 #  get "/dogs" do
 #      @fido = Dog.new("Fido", "February 22nd, 2010", 5)
@@ -23,3 +69,4 @@ end
 #    post "/dogs" do
 #      "This worked"
 #    end
+
