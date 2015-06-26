@@ -1,0 +1,17 @@
+
+[1mFrom:[0m /home/nitrous/code/encryption/symbols.rb @ line 170 Symbols#determine:
+
+    [1;34m166[0m: [32mdef[0m [1;34mdetermine[0m
+    [1;34m167[0m: 
+    [1;34m168[0m:   [32mif[0m @string.length < [1;34m5[0m && @string.length > [1;34m0[0m
+    [1;34m169[0m:     symbols
+ => [1;34m170[0m:     binding.pry
+    [1;34m171[0m:   [32melsif[0m @string.length < [1;34m10[0m && @string.length > [1;34m6[0m
+    [1;34m172[0m:     symbols2
+    [1;34m173[0m:   [32melsif[0m @string.length < [1;34m31[0m && @string.length > [1;34m25[0m
+    [1;34m174[0m:     symbols3
+    [1;34m175[0m:   [32melse[0m
+    [1;34m176[0m:     symbols4
+    [1;34m177[0m:   [32mend[0m
+    [1;34m178[0m: [32mend[0m
+
