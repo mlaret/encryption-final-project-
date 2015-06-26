@@ -3,6 +3,10 @@ Bundler.require
 require_relative"./numbers.rb"
 require_relative"./symbols.rb"
 require_relative"./letters.rb"
+require_relative"./decode2.rb"
+require_relative"./decode3.rb"
+require_relative"./decode1.rb"
+
 
 
 class MyApp2 < Sinatra::Base
@@ -11,32 +15,54 @@ class MyApp2 < Sinatra::Base
   end
   
   post "/letters" do
-    @letters = Letters.new(params["code"])
+    @letters = Letters.new(params[:code])
     erb :endpage
   end 
   
   post "/symbols" do
-    @symbols = Symbols.new(params["code"])
+
+   #binding.pry
     erb :endpage
   end 
   
-  post "/numbers" do 
-    @numbers = Numbers.new(params["code"])
+  post "/numbers" do
+    erb :endpage1
+  end
+  
+  post "/endpage1" do
+    @number_changer = Numbers.new(params[:string])
+    @number_changer.determine
+    puts @number_changer.string
+    
+   
     erb :endpage1
   end 
   
+<<<<<<< HEAD
   get "/endpage" do
     erb :endpage
-  end
-  get "/endpage1" do
-    erb :endpage2
+=======
+  post "/endpage" do
+    @string_original = Symbols.new(params[:string])
+    @symbols1 = @string_original.determine
+    @symbols = @string_original.string
+   erb :endpage
+>>>>>>> 1f34a9b05c683047c67ed2941f3e651e7790a214
   end
   
-  get "/enpage2" do
+  post "/decodeend" do
+    @string_original = Symbols_Decode.new(params[:decode2])
+    @symbols1 = @string_original.determine
+    @symbols = @string_original.string
+    erb :endpage
+  end
+  
+  post "/decodend1" do
+    @number_original = Number_Decode.new(params[:decode1])
+    @number_original.determine
+    @number_changer = @number_original
     erb :endpage1
   end
-
-  
   
   get "/letters" do
     erb :letter
@@ -55,30 +81,20 @@ class MyApp2 < Sinatra::Base
     erb :decode
   end
   
+  get "/decode1" do
+    erb :decode1
+  end
+  
+  get "/decode2" do
+    erb :decode2
+  end
+  
+  get "/decode3" do
+    erb :decode3
+  end
+  
 
 end
 
   
-
-
-# end
-# get "/vault" do
-#   erb :vault 
-# end 
-
-#  get "/dogs" do
-#      @fido = Dog.new("Fido", "February 22nd, 2010", 5)
-#      erb :dogs
-#  end
-#   get '/' do
-#     erb :index
-#    end 
-  
-
-#    get "/hello" do
-#      "Hi everyone"
-#   end 
-#    post "/dogs" do
-#      "This worked"
-#    end
 
